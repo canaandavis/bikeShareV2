@@ -11,5 +11,5 @@ require(['js/views/app'], function(AppView){
   var app_view = new AppView;
   setInterval(function(){
     app_view.fetchNew();
-  }, 10000)
+  }, 180000);
 });
