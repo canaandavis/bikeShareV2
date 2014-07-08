@@ -6,9 +6,27 @@
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
   <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' /><meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <style>
+      body { margin:0; padding:0; }
+      #map { width:75%; height: 50rem; float: left;}
+      .app-wrapper { width: 25%;, max-height: 20rem; overflow: auto; float: left;}
+      #stations {
+        max-height: 45rem;
+        overflow: auto;
+      }
+    </style>
+  </head>
+    <body>
 
-</head>
-  <body>
+      <div class="app-wrapper">
+        <input type="submit" class="filter" value="all">
+        <input type="submit" class="filter" value="downtown">
+        <input type="submit" class="filter" value="campus">
+        <input type="submit" class="filter" value="east">
+        <input type="submit" class="filter" value="south">
+        <div id="stations"></div>
+      </div>
+        <div id='map'></div>
 
     <script data-main="app/main.js" src="app/js/libs/require/require.min.js"></script>
   </body>
