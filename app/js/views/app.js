@@ -19,6 +19,7 @@ define([
         this.collection = new Stations();
         this.collection.bind('reset', this.buildMap, this);
         this.collection.bind('reset', this.addAllStations, this);
+        this.collection.bind('filtered', this.showOne, this);
         this.collection.fetch({ reset: true });
       },
 
@@ -40,7 +41,6 @@ define([
 
       buildMap: function(collection) {
         this.map = new MapView({ collection : collection.models });
-        console.log(this.map);
         $('#map').append(this.map.render().el);
       },
 
@@ -48,8 +48,12 @@ define([
         var that = this;
         this.$('#stations').html('');
         _.each(stations, function(station){
-          that.addOne(station);
+          station.trigger('filter');
         });
+      },
+
+      showOne: function(view){
+        $('#stations').append(view[0].el);
       },
 
       updateMap: function(stations) {
