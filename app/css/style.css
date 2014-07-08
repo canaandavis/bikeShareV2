@@ -1,0 +1,24 @@
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+  .wrapper .off-canvas-wrap, .wrapper .inner-wrap {
+    height: 100%;
+    width: 100%; }
+    .wrapper .off-canvas-wrap .main-section, .wrapper .inner-wrap .main-section {
+      height: 100%; }
+    .wrapper .off-canvas-wrap #stations, .wrapper .inner-wrap #stations {
+      width: 30%;
+      height: 100%;
+      overflow: auto;
+      float: left; }
+    .wrapper .off-canvas-wrap #map, .wrapper .inner-wrap #map {
+      float: left;
+      width: 70%;
+      height: 94%; }
+    .wrapper .off-canvas-wrap small, .wrapper .inner-wrap small {
+      color: #989898;
+      float: right;
+      margin-right: .65rem; }

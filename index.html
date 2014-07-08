@@ -11,12 +11,62 @@
   <link rel="stylesheet" href="app/css/style.css">
   </head>
     <body>
+      <div class="wrapper">
+
+        <div class="off-canvas-wrap" data-offcanvas>
+
+          <div class="inner-wrap">
+            <nav class="tab-bar">
+              <section class="left-small">
+                <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+              </section>
+
+              <section class="middle tab-bar-section">
+                <h1 class="title">AUSTIN BIKE SHARE</h1>
+              </section>
+            </nav>
+
+            <aside class="left-off-canvas-menu">
+              <ul class="off-canvas-list">
+                <li><label>Locations</label></li>
+                <li><a href="#" class="filter" value="all">All</a></li>
+                <li><a href="#" class="filter" value="downtown">Downtown</a></li>
+                <li><a href="#" value="campus" class="filter">Campus</a></li>
+                <li><a href="#" value="east" class="filter">East</a></li>
+                <li><a href="#" value="south" class="filter">South</a></li>
+                <li><label class="hide-for-medium-up">View</label></li>
+                <li>
+                  <a href="#" class="view-select hide-for-medium-up" value="list-small">List</a>
+                </li>
+                <li>
+                  <a href="#" class="view-select hide-for-medium-up" value="map-small">Map</a>
+                </li>
+              </ul>
+              <small>
+              Powered by <a target="new" href="http://citybik.es/">City Bikes</a>
+              </small>
+            </aside>
+
+            <section class="main-section">
+              <div id="stations" class="show-for-medium-up"></div>
+              <div id="map" ></div>
+            </section>
+
+          <a class="exit-off-canvas"></a>
+
+          </div>
+
+        </div>
+
+      </div>
 
 
-
-    <script data-main="app/main.js" src="app/js/libs/require/require.min.js"></script>
+    <script src="app/js/libs/require/require.min.js"></script>
+    <script src="app/main.js"></script>
   </body>
 </html>
+
+
 
 <!-- <div class="app-wrapper">
         <input type="submit" class="filter" value="all">
@@ -26,4 +76,5 @@
         <input type="submit" class="filter" value="south">
         <div id="stations"></div>
       </div>
-        <div id='map'></div> -->
+      <div id='map'></div> -->
+

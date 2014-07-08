@@ -10,7 +10,7 @@ define([
 
       render: function(){
         this.map = L.mapbox.map('map', 'canaandavis.im7gj1kg')
-                  .setView([30.27, -97.744], 15);
+                  .setView([30.27, -97.744], 14);
         var myLayer = L.mapbox.featureLayer().addTo(this.map);
         var myLayer = L.mapbox.featureLayer().addTo(this.map);
 
@@ -31,6 +31,7 @@ define([
               '<strong>Address:</strong> ' + layer.feature.properties.address + '<\/p>';
           layer.bindPopup(content);
         });
+        console.log(this.collection)
         return this;
       },
 

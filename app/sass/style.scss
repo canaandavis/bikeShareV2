@@ -1,0 +1,32 @@
+@import 'variables';
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  .off-canvas-wrap, .inner-wrap {
+    height: 100%;
+    width: 100%;
+    .main-section {
+      height: 100%
+    }
+    #stations {
+      width: 30%;
+      height: 100%;
+      overflow: auto;
+      float: left;
+    }
+    #map {
+      float: left;
+      width: 70%;
+      height: 94%;
+    }
+    small {
+      color: $light-grey;
+      float: right;
+      margin-right: .65rem;
+    }
+  }
+}

@@ -2,13 +2,15 @@ define([
   'jquery',
   'underscore',
   'backbone',
+  'foundation',
+  'offCanvas',
   'js/collections/stations',
   'js/views/station',
   'js/views/map'
-  ], function($, _, Backbone, Stations, StationView, MapView){
+  ], function($, _, Backbone, Foundation, OffCanvas, Stations, StationView, MapView){
     var AppView = Backbone.View.extend({
 
-      el: $('.app-wrapper'),
+      el: $('.wrapper'),
 
       events: {
         'click .filter' : 'addFilter'
@@ -17,7 +19,7 @@ define([
       initialize: function(){
         this.that = this;
         this.collection = new Stations();
-        this.collection.bind('reset', this.buildMap, this);
+        // this.collection.bind('reset', this.buildMap, this);
         this.collection.bind('reset', this.addAllStations, this);
         this.collection.bind('filtered', this.showOne, this);
         this.filter = "all";
@@ -35,7 +37,7 @@ define([
       },
 
       addFilter: function(filter) {
-        var filter = $(filter.target).val();
+        var filter = $(filter.target).attr('value');
         this.filter = filter;
         this.filterLocations(filter);
       },
@@ -64,7 +66,7 @@ define([
       },
 
       updateMap: function(stations) {
-        this.$('#map').html('');
+        // this.$('#map').html('');
         this.map.updateMap(stations);
       },
 
