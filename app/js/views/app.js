@@ -20,7 +20,9 @@ define([
         this.collection.bind('reset', this.buildMap, this);
         this.collection.bind('reset', this.addAllStations, this);
         this.collection.bind('filtered', this.showOne, this);
-        this.collection.fetch({ reset: true });
+        this.filter = "all";
+        this.listenTo(this.collection, 'change', this.updateStations);
+        this.collection.fetch({reset: true});
       },
 
       addOne: function(station) {
@@ -34,6 +36,11 @@ define([
 
       addFilter: function(filter) {
         var filter = $(filter.target).val();
+        this.filter = filter;
+        this.filterLocations(filter);
+      },
+
+      filterLocations: function(filter){
         var stations = this.collection.filterLocations(filter);
         this.updateLocationList(stations);
         this.updateMap(stations);
@@ -60,6 +67,16 @@ define([
         this.$('#map').html('');
         this.map.updateMap(stations);
       },
+
+      fetchNew: function(){
+        console.log(this.collection);
+        this.collection.fetch();
+      },
+
+      updateStations: function(model){
+        console.log('change');
+        this.filterLocations(this.filter);
+      }
 
     });
     return AppView;

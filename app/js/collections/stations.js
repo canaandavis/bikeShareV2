@@ -9,6 +9,10 @@ define([
 
     model: Station,
 
+    initialize: function(){
+      // this.listenTo(this.models, 'change', this.logChange);
+    },
+
     parse: function(response) {
       return response.network.stations;
     },
