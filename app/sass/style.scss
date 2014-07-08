@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'list';
 
 .wrapper {
   position: absolute;
@@ -17,6 +18,8 @@
       height: 100%;
       overflow: auto;
       float: left;
+      background-color: lighten($light-blue, 15%);
+      padding: 1rem;
     }
     #map {
       float: left;
@@ -27,6 +30,7 @@
       color: $light-grey;
       float: right;
       margin-right: .65rem;
+      margin-top: .65rem;
     }
   }
 }

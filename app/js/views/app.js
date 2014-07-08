@@ -19,7 +19,7 @@ define([
       initialize: function(){
         this.that = this;
         this.collection = new Stations();
-        // this.collection.bind('reset', this.buildMap, this);
+        this.collection.bind('reset', this.buildMap, this);
         this.collection.bind('reset', this.addAllStations, this);
         this.collection.bind('filtered', this.showOne, this);
         this.filter = "all";
@@ -66,7 +66,6 @@ define([
       },
 
       updateMap: function(stations) {
-        // this.$('#map').html('');
         this.map.updateMap(stations);
       },
 
@@ -76,7 +75,7 @@ define([
       },
 
       updateStations: function(model){
-        console.log('change');
+        console.log(change)
         this.filterLocations(this.filter);
       }
 

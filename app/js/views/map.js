@@ -31,7 +31,6 @@ define([
               '<strong>Address:</strong> ' + layer.feature.properties.address + '<\/p>';
           layer.bindPopup(content);
         });
-        console.log(this.collection)
         return this;
       },
 

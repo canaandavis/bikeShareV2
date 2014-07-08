@@ -1,3 +1,18 @@
+.list-template, h4 {
+  font-weight: lighter; }
+
+.list-template {
+  text-align: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dedede;
+  padding: 1rem; }
+  .list-template .title {
+    position: relative; }
+  .list-template .display {
+    display: inline-block;
+    margin-right: .5rem;
+    margin-left: .5rem; }
+
 .wrapper {
   position: absolute;
   top: 0;
@@ -13,12 +28,15 @@
       width: 30%;
       height: 100%;
       overflow: auto;
-      float: left; }
+      float: left;
+      background-color: white;
+      padding: 1rem; }
     .wrapper .off-canvas-wrap #map, .wrapper .inner-wrap #map {
       float: left;
       width: 70%;
       height: 94%; }
     .wrapper .off-canvas-wrap small, .wrapper .inner-wrap small {
-      color: #989898;
+      color: #f7f7f7;
       float: right;
-      margin-right: .65rem; }
+      margin-right: .65rem;
+      margin-top: .65rem; }
