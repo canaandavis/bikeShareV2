@@ -30,7 +30,8 @@
     #stations {
       // width: 30%;
       height: 100%;
-      overflow: auto;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
       float: left;
       background-color: lighten($light-blue, 15%);
       padding: 1rem;
