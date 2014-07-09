@@ -2,17 +2,43 @@
   font-weight: lighter;
 }
 
+.list-template.hover {
+  background-color: #a0d3e8;
+  border-color: #a0d3e8;
+  h4 {
+    color: white;
+  }
+  .display {
+    color: white;
+  }
+}
+
 .list-template {
   text-align: center;
   margin-bottom: 1rem;
   border-bottom: 1px solid darken($light-grey, 10%);
   padding: 1rem;
+  &:hover {
+    background-color: #a0d3e8;
+    border-color: #a0d3e8;
+    h4 {
+      color: white;
+    }
+    .display {
+      color: white;
+    }
+  }
   .title {
     position: relative;
   }
+  .address {
+    margin-bottom: .65rem;
+  }
   .display {
+    font-size: 1.2rem;
     display: inline-block;
     margin-right: .5rem;
     margin-left: .5rem;
+    color: $black;
   }
 }

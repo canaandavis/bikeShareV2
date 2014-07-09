@@ -7,6 +7,11 @@ define([
   ], function($, _, Backbone, Station, listTemplate){
     var StationView = Backbone.View.extend({
 
+      // events: {
+      //   'mouseenter .list-template' : "hoverItem",
+      //   'mouseleave .list-template' : 'hoverItem'
+      // },
+
       initialize: function(){
         this.model.bind('filter', this.showIt, this)
       },
@@ -27,9 +32,9 @@ define([
         return name.substring(0, name.length - 9);
       },
 
-      showInfo: function() {
-        console.log('hello');
-      }
+      // hoverItem: function() {
+      //   this.$('.list-template').toggleClass("hover");
+      // }
   });
     return StationView;
 });

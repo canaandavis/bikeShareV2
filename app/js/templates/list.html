@@ -1,28 +1,28 @@
-<div class="list-template">
+<a target="new" href="http://maps.google.com/maps?q=<%= latitude %>,<%= longitude %>">
+  <div class="list-template">
 
-  <div class="row">
+    <div class="row">
 
-    <div class="large-8 columns large-centered">
-      <h4>
-        <a target="new" href="http://maps.google.com/maps?q=<%= latitude %>,<%= longitude %>">
-          <% if (name.length > 37) { %>
-            <%= name.substring(0, 37) + "..." %>
-          <% } else { %>
-            <%= name %>
-          <% } %>
-        </a>
-      </h4>
-    </div>
-
-    <div class="large-8 large-centered columns">
-      <div class="display">
-        Free: <%= free_bikes %>
+      <div class="large-8 columns large-centered address">
+        <h4>
+            <% if (name.length > 37) { %>
+              <%= name.substring(0, 37) + "..." %>
+            <% } else { %>
+              <%= name %>
+            <% } %>
+        </h4>
       </div>
-      <div class="display">
-        Empty: <%= empty_slots %>
+
+      <div class="large-8 large-centered columns">
+        <div class="display">
+          Free: <%= free_bikes %>
+        </div>
+        <div class="display">
+          Empty: <%= empty_slots %>
+        </div>
       </div>
+
     </div>
 
   </div>
-
-</div>
+</a>
