@@ -28,7 +28,9 @@ define([
           var content = '<h2>'+ layer.feature.properties.title + '<\/h2>' +
               '<p><strong>Free Bikes:</strong> ' + layer.feature.properties.free + '<br \/>' +
               '<strong>Return Slots:</strong> ' + layer.feature.properties.empty + '<br \/>' +
-              '<strong>Address:</strong> ' + layer.feature.properties.address + '<\/p>';
+              '<strong>Address:</strong><a target="new" href="http://maps.google.com/maps?q=' + layer.feature.properties.latitude + ',' + layer.feature.properties.longitude + '"> ' +
+                  layer.feature.properties.address +
+                '</a><\/p>';
           layer.bindPopup(content);
         });
         return this;
@@ -55,6 +57,8 @@ define([
               'title' : station.name,
               'free'  : station.free_bikes,
               'empty' : station.empty_slots,
+              'latitude' : station.latitude,
+              'longitude' : station.longitude,
               'address' : address,
               'marker-color': '#000',
               'marker-size': 'medium',

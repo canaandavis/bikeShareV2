@@ -1,5 +1,7 @@
 @import 'variables';
+@import 'fonts';
 @import 'list';
+@import 'off-canvas';
 
 .wrapper {
   position: absolute;
@@ -7,6 +9,10 @@
   left: 0;
   bottom: 0;
   right: 0;
+  .title {
+    font-family: Roboto;
+    font-weight: bold;
+  }
   .off-canvas-wrap, .inner-wrap {
     height: 100%;
     width: 100%;
