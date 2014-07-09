@@ -13,7 +13,8 @@ define([
       el: $('.wrapper'),
 
       events: {
-        'click .filter' : 'addFilter'
+        'click .filter' : 'addFilter',
+        'click .view-select' : 'changeView'
       },
 
       initialize: function(){
@@ -77,6 +78,16 @@ define([
       updateStations: function(model){
         console.log(change)
         this.filterLocations(this.filter);
+      },
+
+      changeView: function(view){
+        var view = $(view.target).attr('value');
+        var hide = "map";
+        if (view === "map") {
+          hide = "stations";
+        }
+        $("#" + view).removeClass("show-for-large-up");
+        $("#" + hide).addClass("show-for-large-up");
       }
 
     });
