@@ -84,10 +84,10 @@ define([
         var view = $(view.target).attr('value');
         var hide = "map";
         if (view === "map") {
-          hide = "stations";
+          $("#stations").addClass("show-for-large-up");
+        } else {
+          $("#stations").removeClass("show-for-large-up");
         }
-        $("#" + view).removeClass("show-for-large-up");
-        $("#" + hide).addClass("show-for-large-up");
       }
 
     });
