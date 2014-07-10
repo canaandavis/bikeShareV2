@@ -4,14 +4,21 @@
   font-weight: 300; }
 @font-face {
   font-family: Roboto;
+  src: url(./fonts/RobotoSlab-Light.ttf);
+  font-weight: 200; }
+@font-face {
+  font-family: Roboto;
   src: url(./fonts/RobotoSlab-Bold.ttf);
   font-weight: 700; }
 @font-face {
   font-family: Roboto;
   src: url(./fonts/RobotoSlab-Thin.ttf);
   font-weight: 100; }
-.list-template, h4 {
+.list-template {
   font-weight: 100; }
+
+h4 {
+  font-weight: 200; }
 
 @media screen and (min-width: 768px) {
   .list-template:hover {

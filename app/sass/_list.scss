@@ -1,5 +1,9 @@
-.list-template, h4 {
+.list-template {
   font-weight: 100;
+}
+
+h4 {
+  font-weight: 200;
 }
 
 @media screen and (min-width:768px) {
