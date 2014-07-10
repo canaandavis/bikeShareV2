@@ -16,7 +16,7 @@ require.config({
   },
   shim: {
     'foundation.core': {
-      deps: ['jquery', 'modernizr'],
+      deps: ['jquery'],
       exports: 'Foundation'
     },
     'foundation.offcanvas': {
@@ -25,7 +25,7 @@ require.config({
   }
 });
 
-require(['jquery', 'modernizr', 'js/views/app', 'foundation.core' ], function($, Modernizr, AppView){
+require(['jquery', 'js/views/app', 'foundation.core' ], function($, AppView){
   var app_view = new AppView;
   $(document).foundation();
   setInterval(function(){

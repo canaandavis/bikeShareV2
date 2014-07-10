@@ -11,7 +11,7 @@ define([
       el: $('.wrapper'),
 
       events: {
-        'click .filter' : 'addFilter',
+        'click .filter' : 'setFilter',
         'click .view-select' : 'changeView'
       },
 
@@ -35,10 +35,14 @@ define([
         this.collection.each(this.addOne);
       },
 
-      addFilter: function(filter) {
+      setFilter: function(filter) {
         var filter = $(filter.target).attr('value');
         this.filter = filter;
-        this.filterLocations(filter);
+        this.addFilter();
+      },
+
+      addFilter: function() {
+        this.filterLocations(this.filter);
       },
 
       filterLocations: function(filter){
@@ -49,7 +53,9 @@ define([
 
       buildMap: function(collection) {
         this.map = new MapView({ collection : collection.models });
-        $('#map').append(this.map.render().el);
+        this.map.render();
+
+        // $('#map').append(this.map.render().el);
       },
 
       updateLocationList: function(stations) {
@@ -82,8 +88,11 @@ define([
         var hide = "map";
         if (view === "map") {
           $("#stations").addClass("show-for-large-up");
+          $('#map').removeClass('show-for-large-up');
+          this.addFilter();
         } else {
           $("#stations").removeClass("show-for-large-up");
+          $('#map').addClass('show-for-large-up');
         }
       }
 

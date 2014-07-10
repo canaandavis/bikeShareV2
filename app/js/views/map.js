@@ -9,8 +9,19 @@ define([
       // Renders Map view, using MapBox
 
       render: function(){
-        this.map = L.mapbox.map('map', 'canaandavis.im7gj1kg')
-                  .setView([30.27, -97.744], 14);
+        var mq = window.matchMedia('(max-width: 768px)');
+        if (mq.matches) {
+          this.map = L.mapbox.map('map', 'canaandavis.im7gj1kg', {
+              zoomControl: false
+            })
+            .setView([30.27, -97.744], 14);
+        } else {
+          this.map = L.mapbox.map('map', 'canaandavis.im7gj1kg', {
+              zoomControl: true
+            })
+            .setView([30.27, -97.744], 14);
+        }
+
         var myLayer = L.mapbox.featureLayer().addTo(this.map);
         var myLayer = L.mapbox.featureLayer().addTo(this.map);
 
