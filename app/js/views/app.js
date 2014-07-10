@@ -2,12 +2,10 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'foundation',
-  'offCanvas',
   'js/collections/stations',
   'js/views/station',
   'js/views/map'
-  ], function($, _, Backbone, Foundation, OffCanvas, Stations, StationView, MapView){
+  ], function($, _, Backbone, Stations, StationView, MapView){
     var AppView = Backbone.View.extend({
 
       el: $('.wrapper'),
@@ -76,7 +74,6 @@ define([
       },
 
       updateStations: function(model){
-        console.log(change)
         this.filterLocations(this.filter);
       },
 

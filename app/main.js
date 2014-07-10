@@ -1,23 +1,31 @@
 require.config({
   baseUrl: 'app',
   paths: {
+    // Backbone Dependencies
     jquery: 'bower_components/jquery/dist/jquery',
     underscore: 'bower_components/underscore/underscore',
     backbone: 'bower_components/backbone/backbone',
-    foundation: 'bower_components/foundation/js/foundation',
-    offCanvas: 'bower_components/foundation/js/foundation/foundation.offcanvas',
+
+    // Foundation dependencies
+    modernizr: 'bower_components/modernizr/modernizr',
+    'foundation.core': 'bower_components/foundation/js/foundation',
+    'foundation.offcanvas': 'bower_components/foundation/js/foundation/foundation.offcanvas',
+
+    // Require.js Text
     text: 'js/libs/require/text'
   },
   shim: {
-    'foundation': {
-      deps: ['jquery'],
-      exports: 'foundation'
+    'foundation.core': {
+      deps: ['jquery', 'modernizr'],
+      exports: 'Foundation'
+    },
+    'foundation.offcanvas': {
+      deps: ['foundation.core']
     }
   }
 });
 
-require(['js/views/app', 'foundation', 'offCanvas'], function(AppView){
-  console.log($);
+require(['jquery', 'modernizr', 'js/views/app', 'foundation.core' ], function($, Modernizr, AppView){
   var app_view = new AppView;
   $(document).foundation();
   setInterval(function(){
