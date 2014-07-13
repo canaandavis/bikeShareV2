@@ -97,8 +97,6 @@ body {
       padding: 1rem; }
     .wrapper .off-canvas-wrap #stations::-webkit-scrollbar, .wrapper .inner-wrap #stations::-webkit-scrollbar {
       width: 0 !important; }
-    .wrapper .off-canvas-wrap #stations::-scrollbar, .wrapper .inner-wrap #stations::-scrollbar {
-      width: 0 !important; }
     .wrapper .off-canvas-wrap #map, .wrapper .inner-wrap #map {
       float: left; }
     .wrapper .off-canvas-wrap small, .wrapper .inner-wrap small {
