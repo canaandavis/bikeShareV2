@@ -3,7 +3,7 @@ require.config({
   paths: {
     // Backbone Dependencies
     jquery: 'bower_components/jquery/dist/jquery',
-    underscore: 'bower_components/underscore/underscore',
+    underscore: 'bower_components/lodash/dist/lodash.underscore',
     backbone: 'bower_components/backbone/backbone',
 
     // Foundation dependencies
