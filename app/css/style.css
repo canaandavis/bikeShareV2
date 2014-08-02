@@ -20,14 +20,6 @@
 h4 {
   font-weight: 200; }
 
-@media screen and (min-width: 768px) {
-  .list-template:hover {
-    background-color: #a0d3e8;
-    border-color: #a0d3e8; }
-    .list-template:hover h4 {
-      color: white; }
-    .list-template:hover .display.free, .list-template:hover .display.empty {
-      color: white; } }
 @media screen and (max-width: 768px) {
   .list-template h4 {
     font-weight: 300; } }
@@ -42,16 +34,16 @@ h4 {
     position: relative; }
   .list-template .address {
     margin-bottom: .65rem; }
-  .list-template .display {
-    font-size: 1.2rem;
+  .list-template .bike {
     display: inline-block;
-    margin-right: .5rem;
-    margin-left: .5rem;
-    color: #333333; }
-    .list-template .display.free {
-      color: #357fb0; }
-    .list-template .display.empty {
-      color: #9c000b; }
+    margin: 0 auto;
+    height: 14px;
+    width: 14px;
+    border-radius: 50px; }
+    .list-template .bike.free {
+      background-color: #bfc9d8; }
+    .list-template .bike.empty {
+      border: 1px solid #dedede; }
 
 .left-off-canvas-menu .off-canvas-list label {
   font-family: Roboto;

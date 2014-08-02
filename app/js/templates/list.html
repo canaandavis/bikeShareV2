@@ -13,13 +13,13 @@
         </h4>
       </div>
 
-      <div class="large-8 large-centered columns">
-        <div class="display free">
-          Free: <%= free_bikes %>
-        </div>
-        <div class="display empty">
-          Empty: <%= empty_slots %>
-        </div>
+      <div class="small-10 small-centered large-8 large-centered columns">
+          <% for (var i = 0; i < free_bikes; i++) { %>
+            <div class="bike free"></div>
+          <% } %>
+          <% for (var i = 0; i < empty_slots; i++) { %>
+            <div class="bike empty"></div>
+          <% } %>
       </div>
 
     </div>

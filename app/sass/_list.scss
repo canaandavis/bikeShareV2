@@ -6,20 +6,20 @@ h4 {
   font-weight: 200;
 }
 
-@media screen and (min-width:768px) {
-  .list-template {
-    &:hover {
-      background-color: #a0d3e8;
-      border-color: #a0d3e8;
-      h4 {
-        color: white;
-      }
-      .display.free, .display.empty {
-        color: white;
-      }
-    }
-  }
-}
+// @media screen and (min-width:768px) {
+//   .list-template {
+//     &:hover {
+//       background-color: #a0d3e8;
+//       border-color: #a0d3e8;
+//       h4 {
+//         color: white;
+//       }
+//       .display.free, .display.empty {
+//         color: white;
+//       }
+//     }
+//   }
+// }
 
 @media screen and (max-width: 768px) {
   .list-template {
@@ -43,18 +43,17 @@ h4 {
   .address {
     margin-bottom: .65rem;
   }
-  .display {
-    font-size: 1.2rem;
+  .bike {
     display: inline-block;
-    margin-right: .5rem;
-    margin-left: .5rem;
-    color: $black;
+    margin: 0 auto;
+    height: 14px;
+    width: 14px;
+    border-radius: 50px;
     &.free {
-      color: darken($light-blue, 45%);
+      background-color: $dark-grey;
     }
     &.empty {
-      // color: darken($dark-grey, 45%);
-      color: darken($red, 10%);
+      border: 1px solid darken($light-grey, 10%);
     }
   }
 }
