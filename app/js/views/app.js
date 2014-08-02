@@ -87,11 +87,11 @@ define([
         var view = $(view.target).attr('value');
         var hide = "map";
         if (view === "map") {
-          $("#stations").addClass("show-for-large-up");
+          $("#stations-wrapper").addClass("show-for-large-up");
           $('#map').removeClass('show-for-large-up');
           this.addFilter();
         } else {
-          $("#stations").removeClass("show-for-large-up");
+          $("#stations-wrapper").removeClass("show-for-large-up");
           $('#map').addClass('show-for-large-up');
         }
       }

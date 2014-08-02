@@ -60,7 +60,16 @@
 
             <section class="main-section">
               <div class="row fullWidth">
-                <div class="large-4 columns show-for-large-up" id="stations" ></div>
+                <div class="large-4 columns show-for-large-up" id="stations-wrapper" >
+                  <div class="legend">
+                    <div class="legend-wrapper">
+                      Free Bikes: <div class="bike free"></div>
+                      Return Slots: <div class="bike empty"></div><br>
+                      <span class="small">Click location for directions</span>
+                    </div>
+                  </div>
+                  <div id="stations"></div>
+                </div>
                 <div id="map" class="large-8 columns"></div>
               </div>
             </section>
