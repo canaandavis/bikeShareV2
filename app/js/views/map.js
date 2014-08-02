@@ -23,14 +23,13 @@ define([
         }
 
         var myLayer = L.mapbox.featureLayer().addTo(this.map);
-        var myLayer = L.mapbox.featureLayer().addTo(this.map);
 
         var builtFeatures = this.buildPoints();
 
         var geojson = {
           type: 'FeatureCollection',
           features: builtFeatures
-        }
+        };
 
         myLayer.setGeoJSON(geojson);
 
@@ -60,16 +59,16 @@ define([
         var that = this;
         var stations = this.collection;
         var geoJson = _.map(stations, function(station){
-          var station = station.attributes;
-          var address = that.parseAddress(station.extra.address);
+          var stationTemp = station.attributes;
+          var address = that.parseAddress(stationTemp.extra.address);
           return {
             type: "Feature",
             properties: {
-              'title' : station.name,
-              'free'  : station.free_bikes,
-              'empty' : station.empty_slots,
-              'latitude' : station.latitude,
-              'longitude' : station.longitude,
+              'title' : stationTemp.name,
+              'free'  : stationTemp.free_bikes,
+              'empty' : stationTemp.empty_slots,
+              'latitude' : stationTemp.latitude,
+              'longitude' : stationTemp.longitude,
               'address' : address,
               'marker-color': '#000',
               'marker-size': 'medium',
@@ -77,9 +76,9 @@ define([
             },
             geometry: {
               type: 'Point',
-              coordinates: [station.longitude, station.latitude]
+              coordinates: [stationTemp.longitude, stationTemp.latitude]
             }
-          }
+          };
         });
         return geoJson;
       },

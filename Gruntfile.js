@@ -5,7 +5,9 @@
  * Copyright (c) 2012 Sindre Sorhus, contributors
  * Licensed under the MIT license.
  */
-'use strict';
+(function () {
+   'use strict';
+}());
 
 module.exports = function (grunt) {
 grunt.initConfig({
@@ -17,14 +19,25 @@ grunt.initConfig({
         }
       }
     },
+    jshint: {
+      all: {
+        src: ['Gruntfile.js', 'app/js/**/*.js', 'app/main.js']
+      }
+    },
+
     watch: {
       css: {
         files: '**/*.scss',
         tasks: ['sass']
+      },
+      jshint: {
+        files: ['Gruntfile.js', 'app/js/**/*.js', 'app/main.js'],
+        task: ['jshint']
       }
     }
   });
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.registerTask('default',['watch']);
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.registerTask('default',['watch', 'jshint']);
 };

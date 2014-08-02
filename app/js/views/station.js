@@ -13,7 +13,7 @@ define([
       // },
 
       initialize: function(){
-        this.model.bind('filter', this.showIt, this)
+        this.model.bind('filter', this.showIt, this);
       },
 
       model: Station,

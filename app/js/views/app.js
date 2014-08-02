@@ -36,8 +36,8 @@ define([
       },
 
       setFilter: function(filter) {
-        var filter = $(filter.target).attr('value');
-        this.filter = filter;
+        var filterTemp = $(filter.target).attr('value');
+        this.filter = filterTemp;
         this.addFilter();
       },
 
@@ -84,9 +84,9 @@ define([
       },
 
       changeView: function(view){
-        var view = $(view.target).attr('value');
+        var viewTemp = $(view.target).attr('value');
         var hide = "map";
-        if (view === "map") {
+        if (viewTemp === "map") {
           $("#stations-wrapper").addClass("show-for-large-up");
           $('#map').removeClass('show-for-large-up');
           this.addFilter();

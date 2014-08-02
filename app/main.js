@@ -26,7 +26,7 @@ require.config({
 });
 
 require(['jquery', 'js/views/app', 'foundation.core' ], function($, AppView){
-  var app_view = new AppView;
+  var app_view = new AppView();
   $(document).foundation();
   setInterval(function(){
     app_view.fetchNew();
