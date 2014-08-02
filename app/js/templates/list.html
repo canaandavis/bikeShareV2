@@ -14,14 +14,19 @@
       </div>
 
       <div class="small-10 small-centered large-8 large-centered columns">
+        <% if(free_bikes > 0) { %>
           <% for (var i = 0; i < free_bikes; i++) { %>
             <div class="bike free"></div>
           <% } %>
-          <% for (var i = 0; i < empty_slots; i++) { %>
+        <% } %>
+      </div
+      <div class="small-10 small-centered large-8 large-centered columns">
+        <% if(empty_slots > 0) { %>
+         <% for (var i = 0; i < empty_slots; i++) { %>
             <div class="bike empty"></div>
           <% } %>
+        <% } %>
       </div>
-
     </div>
 
   </div>

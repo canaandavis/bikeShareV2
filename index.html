@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Austin Bike Share</title>
-  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 
   <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
   <script src="app/bower_components/modernizr/modernizr.js"></script>
@@ -19,8 +18,7 @@
 
   </script>
   <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
-  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-  <link rel="stylesheet" href="app/bower_components/foundation/css/foundation.css">
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui' />
   <link rel="stylesheet" href="app/css/style.css">
   </head>
     <body>
@@ -61,11 +59,10 @@
             </aside>
 
             <section class="main-section">
-            <div class="row fullWidth">
-              <div class="large-4 columns show-for-large-up" id="stations" ></div>
-              <div id="map" class="large-8 columns"></div>
-            </div>
-
+              <div class="row fullWidth">
+                <div class="large-4 columns show-for-large-up" id="stations" ></div>
+                <div id="map" class="large-8 columns"></div>
+              </div>
             </section>
 
           <a class="exit-off-canvas"></a>

@@ -1,8 +1,9 @@
-@import 'variables';
-@import 'fonts';
-@import 'list';
-@import 'map';
-@import 'off-canvas';
+@import './app/bower_components/foundation/scss/foundation';
+@import './components/variables';
+@import './components/fonts';
+@import './components/list';
+@import './components/map';
+@import './components/off-canvas';
 
 html {
   height: 100%;
@@ -25,6 +26,7 @@ body {
     height: 100%;
     width: 100%;
     .main-section {
+      position: relative;
       height: 100%;
       width: 100%;
       padding-top: .1rem;
@@ -46,6 +48,7 @@ body {
       float: left;
       background-color: lighten($light-blue, 15%);
       padding: 1rem;
+      position: relative;
     }
     #stations::-webkit-scrollbar { width: 0 !important }
     #map {
