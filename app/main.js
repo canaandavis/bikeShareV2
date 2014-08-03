@@ -30,5 +30,5 @@ require(['jquery', 'js/views/app', 'foundation.core' ], function($, AppView){
   $(document).foundation();
   setInterval(function(){
     app_view.fetchNew();
-  }, 180000);
+  }, 900000);
 });
