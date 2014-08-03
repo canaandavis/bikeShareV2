@@ -2244,9 +2244,9 @@ body {
     width: 14px;
     border-radius: 50px; }
     body .bike.free {
-      background-color: #bfc9d8; }
+      background-color: #8fa1bb; }
     body .bike.empty {
-      border: 1px solid #dedede; }
+      background-color: #dfe4eb; }
 
 .wrapper {
   height: 100%;

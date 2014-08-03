@@ -19,10 +19,13 @@ body {
     width: 14px;
     border-radius: 50px;
     &.free {
-      background-color: $dark-grey;
+      // border: 1.9px solid darken($light-grey, 10%);
+      background-color: darken($dark-grey, 15%);
     }
     &.empty {
-      border: 1px solid darken($light-grey, 10%);
+      // border: 1.9px solid darken($light-grey, 10%);
+      background-color: lighten($dark-grey, 10%);
+      // background-color: lighten($yellow, 22%);
     }
   }
 }
