@@ -38,8 +38,8 @@ define([
           var content = '<h2>'+ layer.feature.properties.title + '<\/h2>' +
               '<p><strong>Free Bikes:</strong> ' + layer.feature.properties.free + '<br \/>' +
               '<strong>Return Slots:</strong> ' + layer.feature.properties.empty + '<br \/>' +
-              '<strong>Address:</strong><a target="new" href="http://maps.google.com/maps?q=' + layer.feature.properties.latitude + ',' + layer.feature.properties.longitude + '"> ' +
-                  layer.feature.properties.address +
+              '<a target="new" href="http://maps.google.com/maps?q=' + layer.feature.properties.latitude + ',' + layer.feature.properties.longitude + '"> ' +
+                  '<strong class="button">Get Directions</strong>' +
                 '</a><\/p>';
           layer.bindPopup(content);
         });
@@ -60,7 +60,6 @@ define([
         var stations = this.collection;
         var geoJson = _.map(stations, function(station){
           var stationTemp = station.attributes;
-          var address = that.parseAddress(stationTemp.extra.address);
           return {
             type: "Feature",
             properties: {
@@ -69,7 +68,6 @@ define([
               'empty' : stationTemp.empty_slots,
               'latitude' : stationTemp.latitude,
               'longitude' : stationTemp.longitude,
-              'address' : address,
               'marker-color': '#000',
               'marker-size': 'medium',
               'marker-symbol': 'bicycle',

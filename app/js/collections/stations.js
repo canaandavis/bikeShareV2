@@ -5,12 +5,12 @@ define([
   'js/models/station'
   ], function($, _, Backbone, Station){
   var Stations = Backbone.Collection.extend({
-    url: "http://api.citybik.es/v2/networks/austin?fields=stations",
+    url: "http://bike-share-api.herokuapp.com/api/stations",
 
     model: Station,
 
     parse: function(response) {
-      return response.network.stations;
+      return response;
     },
 
     filterLocations: function(filter){
